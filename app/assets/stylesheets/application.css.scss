@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
+
+
+.get-started{
+  display: block;
+  text-align: center;
+}
+
+.logo {
+  margin: 20px auto 0px auto;
+  display: block;
+}
+
+.new-user-link {
+  display: inline-block;
+  float: right;
+  padding-top: 8px;
+}

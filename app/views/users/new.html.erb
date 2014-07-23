@@ -1,0 +1,21 @@
+<div>
+<h1 class='get-started'>Get Started with 99Gamers!</h1>
+</div>
+
+<div class='row'>
+  <div class='col-xs-4 col-xs-offset-4'>
+    <form role="form" action='<%= users_url%>' method='POST'>
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Username</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter username" name='user[username]'>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name='user[password]'>
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+      <div class='new-user-link'>Have an account? <a href='<%= new_session_url %>'>Sign In</a></div>
+    </form>
+  </div>
+</div>

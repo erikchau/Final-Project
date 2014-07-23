@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
   end
 
   def is_password?(password)
-    BCrypt::Password.new(self.password_hash)is_password?(password)
+    BCrypt::Password.new(self.password_hash).is_password?(password)
   end
 
   def self.find_by_credentials(username, password)
@@ -49,5 +49,8 @@ class User < ActiveRecord::Base
     self.save!
     self.session_token
   end
+
+
+
 
 end

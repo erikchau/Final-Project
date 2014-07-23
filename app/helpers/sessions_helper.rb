@@ -25,7 +25,7 @@ module SessionsHelper
       redirect_to new_session_url unless signed_in?
     end
 
-    def requre_signed_out
+    def require_signed_out
       redirect_to user_url(current_user) if signed_in?
     end
 

@@ -12,7 +12,10 @@ FinalProject.Routers.AppRouter = Backbone.Router.extend({
     this.swapView(dashboardView);
   },
   
-  
+  sellGames: function(){
+    sellView = new FinalProject.Views.Sell;
+    this.swapView(sellView);
+  },
   
   
   

@@ -12,14 +12,15 @@ module Api
     end
     
     def destroy
+      # MAKE ME GO BOOOOOOOOOM BABY
     end
     
     def create
-      game = current_user.games.new(game_params)
-      if game.save
+      @game = current_user.games.new(game_params)
+      if @game.save
         render :show
       else
-        render json: game.errors.full_messages, status: :unprocessable_entity
+        render json: @game.errors.full_messages, status: :unprocessable_entity
       end
     end
     

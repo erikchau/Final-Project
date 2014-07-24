@@ -1,0 +1,77 @@
+<div class='jumbotron'>
+  <h1>List Your Game Here!</h1>
+</div>
+
+
+
+<div class='row'>
+  <div class='col-xs-6 col-xs-offset-3'>
+
+    <form role="form">
+  
+  
+      <div class="form-group">
+        <label for="game_title">Title</label>
+        <input type="text" class="form-control" placeholder="Enter title">
+      </div>  
+  
+      <div class='form-group'>
+        <label for='game-console'>What console is it for?</label>
+        <select>
+          <option> </option>
+          <option value='PS4'>PS4</option>
+          <option value='PS3'>PS3</option>
+          <option value='360'>360</option>
+          <option value='XBOne'>XBOne</option>
+          <option value='Wii'>Wii</option>
+          <option value='Wii U'>Wii U</option>
+          <option value='PSP'>PSP</option>
+          <option value='Vita'>Vita</option>
+          <option value='DS'>DS</option>
+          <option value='3DS'>3DS</option>
+        </select>
+      </div>
+  
+  
+      <div class="form-group">
+        <label for="condition">Condition</label>
+        <select>
+          <option> </option>
+          <option value='Brand New'>Brand New</option>
+          <option value='Like New'>Like New</option>
+          <option value='Very Good'>Very Good</option>
+          <option value='GOod'>Good</option>
+          <option value='Acceptable'>Acceptable</option>
+        </select>
+      </div>
+  
+  
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> Check me out
+        </label>
+      </div>
+  
+  
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+    t.integer  "user_id",                    null: false
+    t.string   "title",                      null: false
+    t.string   "console",                    null: false
+    t.text     "comments"
+    t.integer  "price",                      null: false
+    t.string   "condition",                  null: false
+    t.text     "img_url"
+    t.boolean  "sold",       default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"

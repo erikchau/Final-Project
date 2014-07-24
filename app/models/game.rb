@@ -17,7 +17,7 @@
 
 class Game < ActiveRecord::Base
 
-  CONSOLES = ['Playstation 4', 'Playstation 3', 'Xbox 360', 'Xbox One', 'Wii', 'Wii U', 'PSP', 'PSP Vita', 'Nintendo DS', 'Nintendo 3DS']
+  CONSOLES = ['PS4', 'PS3', '360', 'XBOne', 'Wii', 'Wii U', 'PSP', 'Vita', 'DS', '3DS']
   CONDITIONS = ['Brand New', 'Like New', 'Very Good', 'Good', 'Acceptable']
 
   belongs_to :user

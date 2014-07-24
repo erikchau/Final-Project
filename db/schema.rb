@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20140724065500) do
     t.integer  "price",                      null: false
     t.string   "condition",                  null: false
     t.text     "img_url"
-    t.boolean  "sold",       default: false, null: false
+    t.boolean  "sold",       default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

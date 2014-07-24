@@ -163,7 +163,7 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 4.0.0)
   ejs
-  jbuilder (~> 2.0)
+  jbuilder
   jquery-rails
   pg
   pry-rails

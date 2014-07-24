@@ -7,13 +7,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<%= root_url %>">99Gamers</a>
+      <span class="navbar-brand"> 99Gamers</span>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <% if signed_in? %>
-        <li><a href='#/dashboard'>Dashboard</a></li>
+        <li><a href='#/'>Dashboard</a></li>
         <% end %>
         <li><a href='#/browse'>Browse</a></li>
         <% if signed_in? %>

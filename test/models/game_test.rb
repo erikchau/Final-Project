@@ -10,7 +10,7 @@
 #  price      :integer          not null
 #  condition  :string(255)      not null
 #  img_url    :text
-#  sold       :boolean          default(FALSE), not null
+#  sold       :boolean          default(FALSE)
 #  created_at :datetime
 #  updated_at :datetime
 #

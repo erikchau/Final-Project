@@ -3,8 +3,11 @@ module Api
    
     def show
       @user = User.find(params[:id])
-      debugger
-      render json: @user
+      if @user
+        render :show
+      else
+        render json: ['This member does not exist'], status: :unprocessable_entity
+      end
     end
   
   

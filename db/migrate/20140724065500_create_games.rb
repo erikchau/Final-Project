@@ -8,7 +8,7 @@ class CreateGames < ActiveRecord::Migration
       t.integer :price, null: false
       t.string :condition, null: false
       t.text :img_url
-      t.boolean :sold, default: false, null: false
+      t.boolean :sold, default: false
 
       t.timestamps
     end

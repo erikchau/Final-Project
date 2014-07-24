@@ -1,17 +1,29 @@
 FinalProject.Routers.AppRouter = Backbone.Router.extend({
   
   routes:{
-    'dashboard': 'dashboard',
+    '': 'dashboard',
     'browse': 'browse',
     'games/:id': 'gameShow',
     'sell': 'sellGames'
-  }
+  },
+  
+  dashboard: function(){
+    dashboardView = new FinalProject.Views.Dashboard;
+    this.swapView(dashboardView);
+  },
   
   
   
   
-  swapViews: function(view){
+  
+  
+  swapView: function(view){
+    if(this.currentView){
+      this.currentView.remove()
+    }
     
+    $('.content').html(view.render().$el)
+    this.currentView = view
   }
   
   

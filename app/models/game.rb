@@ -10,7 +10,7 @@
 #  price      :integer          not null
 #  condition  :string(255)      not null
 #  img_url    :text
-#  sold       :boolean          default(FALSE), not null
+#  sold       :boolean          default(FALSE)
 #  created_at :datetime
 #  updated_at :datetime
 #
@@ -22,7 +22,7 @@ class Game < ActiveRecord::Base
 
   belongs_to :user
 
-  validates :user_id, :title, :console, :price, :condition, :sold, presence: true
+  validates :user_id, :title, :console, :price, :condition, presence: true
   validates :console, inclusion: CONSOLES
   validates :condition, inclusion: CONDITIONS
   validates :price, numericality: true

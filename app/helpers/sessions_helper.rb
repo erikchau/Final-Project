@@ -22,11 +22,11 @@ module SessionsHelper
     end
 
     def require_signed_in
-      redirect_to new_session_url unless signed_in?
+      redirect_to new_sessions_url unless signed_in?
     end
 
     def require_signed_out
-      redirect_to user_url(current_user) if signed_in?
+      redirect_to root_url if signed_in?
     end
 
 end

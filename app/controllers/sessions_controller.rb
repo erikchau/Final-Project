@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   before_action :require_signed_out, only: [:new, :create]
-  before_action :requre_signed_in, only: [:destroy]
+  before_action :require_signed_in, only: [:destroy]
 
   def new
     render :new
@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out
-    redirect_to new_session_url
+    redirect_to new_sessions_url
   end
 
 

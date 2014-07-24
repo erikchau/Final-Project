@@ -16,7 +16,9 @@
         <li><a href='#/dashboard'>Dashboard</a></li>
         <% end %>
         <li><a href='#/browse'>Browse</a></li>
+        <% if signed_in? %>
         <li><a href='#/sell'>Sell</a></li>
+        <% end %>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">

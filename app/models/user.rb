@@ -15,6 +15,8 @@ class User < ActiveRecord::Base
 
   attr_reader :password
 
+  has_many :games
+
   validates :username, presence: true, uniqueness: true
   validates :password, presence: true, length: {minimum: 6}, on: :create
   validates :password_hash, presence: true
@@ -50,7 +52,8 @@ class User < ActiveRecord::Base
     self.session_token
   end
 
-
-
+  def add_coins(amount)
+    self.coins += amount
+  end
 
 end

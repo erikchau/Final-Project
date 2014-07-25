@@ -39,7 +39,7 @@ module Api
     private
     
     def game_params
-      params.require(:game).permit(:title, :console, :comments, :price, :condition, :img_url, :sold)
+      params.require(:game).permit(:title, :console, :comments, :price, :condition, :sold)
     end
   
   end

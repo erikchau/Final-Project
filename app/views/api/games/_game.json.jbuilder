@@ -5,7 +5,7 @@ json.(game, :id,
             :comments,
             :price,
             :condition,
-            :img_url,
+            :api_id,
             :sold,
             :created_at, 
             :updated_at

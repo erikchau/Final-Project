@@ -9,10 +9,10 @@
 #  comments   :text
 #  price      :integer          not null
 #  condition  :string(255)      not null
-#  img_url    :text
 #  sold       :boolean          default(FALSE)
 #  created_at :datetime
 #  updated_at :datetime
+#  api_id     :text
 #
 
 class Game < ActiveRecord::Base

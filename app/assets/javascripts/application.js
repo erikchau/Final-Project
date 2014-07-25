@@ -13,9 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require turbolinks
+
 //= require underscore
 //= require backbone
+//= require jquery.serializejson
 //= require final_project
 //= require_tree ../templates
 //= require_tree ./models

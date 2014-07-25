@@ -7,7 +7,7 @@ json.games @user.games do |game|
   json.comments game.comments
   json.price game.price
   json.condition game.condition
-  json.img_url game.img_url
+  json.api_id game.api_id
   json.sold game.sold
 end
   

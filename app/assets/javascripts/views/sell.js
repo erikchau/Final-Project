@@ -6,6 +6,25 @@ FinalProject.Views.Sell = Backbone.View.extend({
     var renderedContent = this.template();
     this.$el.html(renderedContent);
     return this
+  },
+  
+  events: {
+    'submit .listing-form': 'createListing'
+  },
+  
+  createListing: function(event){
+    event.preventDefault();
+    
+    var params = $(event.currentTarget).serializeJSON();
+    
+    var newListing = new FinalProject.Models.Game(params.game);
+    newListing.save({}, {
+      success: function(game){
+        FinalProject.Collections.games.add(newListing);
+        newListing.fetch();
+        Backbone.history.navigate('/', {trigger: true});
+      }
+    });
   }
   
 });

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140724215909) do
+ActiveRecord::Schema.define(version: 20140725005038) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,12 +23,13 @@ ActiveRecord::Schema.define(version: 20140724215909) do
     t.text     "comments"
     t.integer  "price",                      null: false
     t.string   "condition",                  null: false
-    t.text     "img_url"
     t.boolean  "sold",       default: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "api_id"
   end
 
+  add_index "games", ["api_id"], name: "index_games_on_api_id", using: :btree
   add_index "games", ["console"], name: "index_games_on_console", using: :btree
   add_index "games", ["id"], name: "index_games_on_id", using: :btree
   add_index "games", ["title"], name: "index_games_on_title", using: :btree

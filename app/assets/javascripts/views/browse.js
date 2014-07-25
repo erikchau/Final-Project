@@ -10,6 +10,9 @@ FinalProject.Views.Browse = Backbone.CompositeView.extend({
   
   
   addGame: function(game){
+    if (game.attributes['sold'] === true){
+      return;
+    }
     var gameShow = new FinalProject.Views.GameShow({model: game});
     this.addSubview('.games-index', gameShow);
   },

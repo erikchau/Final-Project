@@ -16,6 +16,8 @@
 #
 
 class Game < ActiveRecord::Base
+  
+  default_scope {order('id ASC')}
 
   CONSOLES = ['PS4', 'PS3', '360', 'XBOne', 'Wii', 'Wii U', 'PSP', 'Vita', 'DS', '3DS']
   CONDITIONS = ['Brand New', 'Like New', 'Very Good', 'Good', 'Acceptable']

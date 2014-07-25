@@ -8,14 +8,15 @@ FinalProject.Collections.Games = Backbone.Collection.extend({
     var games = this;
     
     var game;
-    if (game = this.get(id)) {
-      game.fetch()
+    if ( game = this.get(id) ) {
+      game.fetch();
     } else {
       game = new FinalProject.Models.Game({id: id})
-      game.fetch()({
+      game.fetch({
         success: function(){ games.add(game) }
       });
     }
+    return game;
   }
   
   

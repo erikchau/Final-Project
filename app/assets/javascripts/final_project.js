@@ -6,7 +6,6 @@ window.FinalProject = {
   initialize: function() {
     new FinalProject.Routers.AppRouter();
     Backbone.history.start();
-    FinalProject.Collections.games.fetch();
   }
 };
 

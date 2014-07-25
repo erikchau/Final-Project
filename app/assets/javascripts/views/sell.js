@@ -22,7 +22,7 @@ FinalProject.Views.Sell = Backbone.View.extend({
       success: function(game){
         FinalProject.Collections.games.add(newListing);
         newListing.fetch();
-        Backbone.history.navigate('/', {trigger: true});
+        Backbone.history.navigate('/games/' + newListing.id , {trigger: true});
       }
     });
   }

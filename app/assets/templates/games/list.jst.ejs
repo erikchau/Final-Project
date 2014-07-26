@@ -1,0 +1,26 @@
+<div class='row'>
+  <hr>
+  <div class='col-xs-4' >
+
+    Game Title:
+    <a data-id='<%= game.id %>' href='#/games/<%= game.id %>' class='game-link'><%= game.get('title') %></a>
+    <br>
+    Seller:
+    <%= game.attributes.user.username %>
+  </div>
+
+  <div class='col-xs-4' >
+    Comments: 
+    <%= game.get('comments') %>
+  </div>
+
+  <div class='col-xs-2' >
+   Price:
+   <%= game.get('price') %>
+  </div>
+  
+  <div class='col-xs-2' >
+  <button class='btn btn-primary'>Buy Game Now</button>
+  </div>
+  
+</div>

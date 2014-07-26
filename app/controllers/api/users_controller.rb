@@ -10,6 +10,10 @@ module Api
       end
     end
   
+    def index
+      @users = User.all
+      render :index
+    end
   
   
   

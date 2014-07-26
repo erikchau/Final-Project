@@ -2,7 +2,7 @@ module Api
   class GamesController < ApiController
   
     def index
-      @games = Game.all
+      @games = Game.where(sold: false)
       render :index
     end
     
@@ -20,7 +20,7 @@ module Api
       if @game.save
         render :show
       else
-        render json: @game.errors.full_messages, status: :unprocessable_entity
+        render json: flash.now[:errors] = @game.errors.full_messages, status: :unprocessable_entity
       end
     end
     

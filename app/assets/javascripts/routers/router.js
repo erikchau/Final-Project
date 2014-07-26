@@ -24,9 +24,6 @@ FinalProject.Routers.AppRouter = Backbone.Router.extend({
   },
   
   gameShow: function(id){
-    var model = FinalProject.Collections.games.getOrFetch(id);
-    var showView = new FinalProject.Views.GameShow({model: model});
-    this.swapView(showView);
   },
   
   

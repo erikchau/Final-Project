@@ -1,8 +1,8 @@
-FinalProject.Views.GameShow = Backbone.View.extend({
+FinalProject.Views.GameList = Backbone.View.extend({
   
-  template: JST['games/show'],
+  template: JST['games/list'],
   
-  initialize: function(){
+  initialize: function(options){
     this.listenTo(this.model, 'sync add change', this.render)
   },
   

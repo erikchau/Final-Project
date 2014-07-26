@@ -2,18 +2,18 @@ FinalProject.Views.Browse = Backbone.CompositeView.extend({
   
   template: JST['games/index'],
   
-  initialize: function(){ 
+  initialize: function(){
+    var that = this;
+    
     this.listenTo(this.collection, 'add', this.addGame);
-    this.listenTo(this.collection, 'sync', this.render)
-    _(this.collection.models).each(this.addGame.bind(this));
+    this.listenTo(this.collection, 'sync change', this.render)
+    _(that.collection.models).each(that.addGame.bind(that));
+    
   },
   
   
   addGame: function(game){
-    if (game.attributes['sold'] === true){
-      return;
-    }
-    var gameShow = new FinalProject.Views.GameShow({model: game});
+    var gameShow = new FinalProject.Views.GameList({model: game});
     this.addSubview('.games-index', gameShow);
   },
 

@@ -11,6 +11,10 @@ json.(game, :id,
             :updated_at
 )
 
+json.user do
+  json.username game.user.username
+end
+
 
 
 

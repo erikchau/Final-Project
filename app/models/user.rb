@@ -18,6 +18,14 @@ class User < ActiveRecord::Base
   attr_reader :password
 
   has_many :games
+  
+  has_many :buys,
+  foreign_key: :user_id,
+  class_name: 'Sale'
+  
+  has_many :bought_games,
+  through: :buys, 
+  source: :game
 
   validates :username, presence: true, uniqueness: true
   validates :password, presence: true, length: {minimum: 6}, on: :create

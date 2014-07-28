@@ -1,0 +1,1 @@
+API_KEY = Figaro.env.giantbomb_key

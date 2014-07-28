@@ -23,6 +23,12 @@ class Game < ActiveRecord::Base
   CONDITIONS = ['Brand New', 'Like New', 'Very Good', 'Good', 'Acceptable']
 
   belongs_to :user
+  
+  has_one :sale
+  
+  has_one :buyer, 
+  through: :sale,
+  source: :buyer
 
   validates :user_id, :title, :console, :price, :condition, presence: true
   validates :console, inclusion: CONSOLES

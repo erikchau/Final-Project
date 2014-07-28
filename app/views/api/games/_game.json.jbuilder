@@ -13,6 +13,7 @@ json.(game, :id,
 
 json.user do
   json.username game.user.username
+  json.id game.user.id
 end
 
 

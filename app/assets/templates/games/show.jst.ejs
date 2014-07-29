@@ -1,6 +1,9 @@
 <h1 class='jumbotron'><%= game.get('title') %></h1>
 
-  <form class='buy-form'>
-    <input type='hidden' name='sale[game_id]' value='<%= game.id %>'>
-    <button class='btn btn-primary buy-btn'>Buy Game Now</button>
-  </form>
+
+
+<p class='cannot-buy-error'>You Don't Have Enough Coins! Buy More!</p>
+<form class='buy-form'>
+  <input type='hidden' name='sale[game_id]' value='<%= game.id %>'>
+  <button class='btn btn-primary buy-btn'>Buy Game Now</button>
+</form>

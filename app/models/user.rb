@@ -70,5 +70,10 @@ class User < ActiveRecord::Base
     coins = self.coins += amount
     return coins
   end
-
+  
+  def subtract_coins(amount)
+    coins = self.coins -= amount
+    return coins
+  end
+  
 end

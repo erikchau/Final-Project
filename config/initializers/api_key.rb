@@ -1,1 +1,0 @@
-API_KEY = Figaro.env.pusher_key

@@ -10,6 +10,7 @@ FinalProject.Routers.AppRouter = Backbone.Router.extend({
   },
   
   dashboard: function(){
+    
     var dashboardView = new FinalProject.Views.Dashboard;
     this.swapView(dashboardView);
   },

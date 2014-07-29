@@ -17,18 +17,13 @@
 
 body {
   padding: 50px 0px;
-  height: 100%;
-  width: 100%;
 }
 
 h1{
   text-align: center;
 }
 
-html{
-  height: 100%;
-  width: 100%;
-}
+
 
 .auth_button {
   display: block;
@@ -55,11 +50,41 @@ html{
   text-align: center;
 }
 
-.logo {
-  margin: 20px auto 0px auto;
-  display: block;
+h2.dashboard-well {
+  text-align: center;
 }
 
 .header {
   text-align: center;
 }
+
+.logo {
+  margin: 20px auto 0px auto;
+  display: block;
+}
+
+div.well {
+  overflow-y: scroll;
+  width: 49%;
+}
+
+.list-div {
+  word-wrap: break-word;
+}
+
+.well-left{
+  float: left;
+}
+
+.well-right{
+  float: right;
+}
+
+.glyphicon-plus {
+  color: green;
+}
+
+.glyphicon-minus {
+  color: red;
+}
+

@@ -17,6 +17,12 @@ json.user do
   json.coins game.user.coins
 end
 
+if game.buyer
+  json.buyer do 
+    json.username game.buyer.username
+    json.id game.buyer.id
+  end
+end
 
 
 

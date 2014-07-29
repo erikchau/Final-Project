@@ -7,7 +7,16 @@ FinalProject.Views.Dashboard = Backbone.CompositeView.extend({
     this.listenTo(this.collection, 'add', this.addGame)
   },
   
-  addGame: function(){
+  addGame: function(game){
+    if ( game.get('user_id') == $('#bootstrapped-user-id').html() && game.get('sold') === false ){
+      var gameShow = new FinalProject.Views.GameList({model: game, dashboard: true});
+      this.addSubview('.games-for-sale', gameShow);
+    } else {
+      var user_id = $('#bootstrapped-user-id').text();
+      var gameShow = new FinalProject.Views.GameList({model: game, dashboard: true, userID: user_id});
+      this.addSubview('.recent-trades', gameShow);
+    }
+    
     
   },
   

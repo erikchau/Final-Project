@@ -1,1 +1,1 @@
-API_KEY = Figaro.env.giantbomb_key
+API_KEY = Figaro.env.pusher_key

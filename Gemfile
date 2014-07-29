@@ -20,6 +20,7 @@ gem 'figaro'
 gem 'bcrypt'
 
 gem 'ejs'
+gem 'rails_12factor', group: :production
 
 group :development do
   gem 'pry-rails'

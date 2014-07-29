@@ -18,10 +18,8 @@ FinalProject.Views.Sell = Backbone.View.extend({
     var params = $(event.currentTarget).serializeJSON();
     
     var newListing = new FinalProject.Models.Game(params.game);
-    debugger
     newListing.save({}, {
       success: function(game){
-        FinalProject.Collections.games.add(newListing);
         newListing.fetch();
         Backbone.history.navigate('#/games/' + newListing.id , {trigger: true});
       }

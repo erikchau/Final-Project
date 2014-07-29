@@ -30,7 +30,7 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness: true
   validates :password, presence: true, length: {minimum: 6}, on: :create
   validates :password_hash, presence: true
-  before_validation :set_session_token
+  before_validation :ensure_session_token
 
   def password=(password)
     if password.present?
@@ -61,9 +61,14 @@ class User < ActiveRecord::Base
     self.save!
     self.session_token
   end
+  
+  def ensure_session_token
+    self.session_token ||= self.class.generate_session_token
+  end
 
   def add_coins(amount)
-    self.coins += amount
+    coins = self.coins += amount
+    return coins
   end
 
 end

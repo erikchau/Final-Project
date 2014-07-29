@@ -2,7 +2,7 @@ module Api
   class GamesController < ApiController
   
     def index
-      @games = Game.where(sold: false)
+      @games = Game.where(sold: false).where.not(user_id: current_user.id)
       render :index
     end
     

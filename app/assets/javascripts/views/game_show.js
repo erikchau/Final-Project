@@ -18,12 +18,13 @@ FinalProject.Views.GameShow = Backbone.View.extend({
   },
   
   buyGame: function(event){
-    debugger
     event.preventDefault();
     var params = $(event.currentTarget).serializeJSON();
     var sale = new FinalProject.Models.Sale(params.sale);
     sale.save({}, {
-      success: function(){alert('done!')}
+      success: function(){
+        Backbone.history.navigate('#/purchased')
+      }
     });
   }
   

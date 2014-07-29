@@ -30,19 +30,8 @@
         <% end %>
 
         <% if signed_in? %>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.username %> <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Inventory</a></li>
-            <li><a href="#">Wish List</a></li>
-            <li><a href="#">Account History</a></li>
-            <li class="divider"></li>
-            <li>
-             <a data-toggle="modal" data-target=".bs-example-modal-sm">Buy Coins</a>
-            </li>
-          </ul>
-        </li>
+          <li><button data-toggle="modal" data-target=".bs-example-modal-sm" class='navbar-btn btn btn-default'>Coins: <span class='coin_amt'><%= current_user.coins %></span></button></li>
+          <li><p class="navbar-text navbar-right"><%= current_user.username %> &nbsp &nbsp</li>
         <% end %>
 
         <% if signed_in? %>

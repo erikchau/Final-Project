@@ -6,12 +6,12 @@ FinalProject.Routers.AppRouter = Backbone.Router.extend({
     'games/:id': 'gameShow',
     'sell': 'sellGames',
     'purchased': 'purchased'
-    
   },
   
   dashboard: function(){
-    
-    var dashboardView = new FinalProject.Views.Dashboard;
+    var games = new FinalProject.Collections.Games
+    games.fetch({data: {dashboard: true}})
+    var dashboardView = new FinalProject.Views.Dashboard({collection: games});
     this.swapView(dashboardView);
   },
   

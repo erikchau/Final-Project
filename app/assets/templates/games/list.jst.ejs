@@ -1,9 +1,12 @@
 <div class='row'>
   <hr>
+  
   <div class='col-xs-4' >
-
     Game Title:
     <a data-id='<%= game.id %>' href='#/games/<%= game.id %>' class='game-link'><%= game.get('title') %></a>
+    <br>
+    Seller:
+    <%= game.attributes.user.username %>
   </div>
 
   <div class='col-xs-4' >
@@ -12,8 +15,8 @@
   </div>
   
   <div class='col-xs-2' >
-    Seller:
-    <%= game.attributes.user.username %>
+    Condition:
+    <%= game.get('condition') %>
   </div>
 
   <div class='col-xs-2' >

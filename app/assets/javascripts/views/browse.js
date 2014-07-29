@@ -4,7 +4,6 @@ FinalProject.Views.Browse = Backbone.CompositeView.extend({
   
   initialize: function(){
     var that = this;
-    
     this.listenTo(this.collection, 'add', this.addGame);
     this.listenTo(this.collection, 'sync change', this.render)
     _(that.collection.models).each(that.addGame.bind(that));
@@ -13,7 +12,7 @@ FinalProject.Views.Browse = Backbone.CompositeView.extend({
   
   
   addGame: function(game){
-    if (game.get('user_id') == $('#bootstrapped-user-id').html()){
+    if ( game.get('user_id') == $('#bootstrapped-user-id').html() || game.get('sold') === true ){
       return;
     }
     var gameShow = new FinalProject.Views.GameList({model: game});

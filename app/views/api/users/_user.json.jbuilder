@@ -10,3 +10,15 @@ json.games user.games do |game|
   json.api_id game.api_id
   json.sold game.sold
 end
+
+json.bought_games user.bought_games do |buy|
+  json.id buy.id
+  json.title buy.title
+  json.console buy.console
+  json.comments buy.comments
+  json.price buy.price
+  json.condition buy.condition
+  json.api_id buy.api_id
+  json.sold buy.sold
+end
+

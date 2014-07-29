@@ -13,6 +13,9 @@ FinalProject.Views.Browse = Backbone.CompositeView.extend({
   
   
   addGame: function(game){
+    if (game.get('user_id') == $('#bootstrapped-user-id').html()){
+      return;
+    }
     var gameShow = new FinalProject.Views.GameList({model: game});
     this.addSubview('.games-index', gameShow);
   },

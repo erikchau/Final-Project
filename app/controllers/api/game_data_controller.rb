@@ -31,6 +31,9 @@ module Api
       query_values: {
         api_key: ENV['giant_bomb_key'],
         format: 'json',
+        query: params[:query],
+        resources: 'game',
+        field_list: 'name,description,id,image,platforms'
       }).to_s
       
       data = RestClient.get(url)

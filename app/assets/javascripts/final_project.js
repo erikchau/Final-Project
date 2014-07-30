@@ -12,6 +12,7 @@ window.FinalProject = {
 $(document).ready(function(){
   FinalProject.initialize();
   $(document).on('submit', '.buy-coin-form', buyCoins)
+  $(document).on('submit', '.nav-search-bar', search)
 });
 
 
@@ -28,4 +29,11 @@ var buyCoins = function(event){
       $('.coin-modal').modal('hide')
     }
   });
+};
+
+var search = function(event) {
+  event.preventDefault();
+  var search = $(event.currentTarget).serializeJSON();
+  Backbone.history.navigate('#/search/' + search.query)
+  $('.nav-search-input').val('')  
 };

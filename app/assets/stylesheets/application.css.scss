@@ -61,7 +61,7 @@ h2.dashboard-well {
   display: block;
 }
 
-div.well {
+div.dashboard-well {
   width: 49%;
 }
 
@@ -83,6 +83,24 @@ div.well {
 
 .glyphicon-minus {
   color: red;
+}
+
+.search-results {
+  position: relative;
+}
+
+.search-div {
+  word-wrap: break-word;
+}
+
+.search-result-item {
+  display: inline-block;
+  margin: 10px ;
+}
+
+.search-img {
+  height: 100%;
+  width: 100%;
 }
 
 

@@ -6,7 +6,7 @@
     <a data-id='<%= game.id %>' href='#/games/<%= game.id %>' class='game-link'><%= game.get('title') %></a>
     <br>
     Seller:
-    <span seller-id='<%= game.attributes.user.id %>'><%= game.attributes.user.username %></span>
+    <a href='#/users/<%= game.attributes.user.id %>'><%= game.attributes.user.username %></span>
   </div>
 
   <div class='col-xs-4 list-div' >
@@ -40,13 +40,13 @@
     
     <% if (game.attributes.buyer){ %>
       <% if (game.attributes.buyer.id == userID) { %>
-        Seller: <%= game.attributes.user.username %>
+        Seller: <a href='#/user/<%= game.attributes.user.id %>'><%= game.attributes.user.username %></a>
       <% } else { %>
-        Buyer: <%= game.attributes.buyer.username %>
+        Buyer:  <a href='#/user/<%= game.attributes.buyer.id %>'><%= game.attributes.buyer.username %></a>
       <% } %>
     <% } else { %>
       Seller:
-      <%= game.attributes.user.username %>
+       <a href='#/user/<%= game.attributes.user.id %>'><%= game.attributes.user.username %></a>
     <% } %>
     
     

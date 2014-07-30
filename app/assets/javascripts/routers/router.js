@@ -4,6 +4,7 @@ FinalProject.Routers.AppRouter = Backbone.Router.extend({
     '': 'dashboard',
     'games': 'browse',
     'games/:id': 'gameShow',
+    'user/:id': 'userShow',
     'sell': 'sellGames',
     'purchased': 'purchased'
   },
@@ -33,8 +34,16 @@ FinalProject.Routers.AppRouter = Backbone.Router.extend({
   },
   
   purchased: function(){
-    var purchaseView = new FinalProject.Views.Purchased
+    var purchaseView = new FinalProject.Views.Purchased;
     this.swapView(purchaseView);
+  },
+  
+  userShow: function(id){
+    var user = FinalProject.Collections.users.getOrFetch(id)
+    var games = new FinalProject.Collections.Games
+    games.fetch({data: {user_id: id}})
+    var userView = new FinalProject.Views.UserShow({model: user, collection: games})
+    this.swapView(userView)
   },
   
   swapView: function(view){

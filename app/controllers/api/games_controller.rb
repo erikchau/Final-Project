@@ -5,6 +5,9 @@ module Api
       if params[:dashboard]
         @games = Game.where(user_id: current_user.id).concat(current_user.bought_games)
         render :index
+      elsif params[:user_id]
+        @games = Game.where(user_id: params[:user_id])
+        render :index
       else
         @games = Game.where(sold: false).where.not(user_id: current_user.id)
         render :index

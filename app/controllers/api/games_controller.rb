@@ -8,6 +8,9 @@ module Api
       elsif params[:user_id]
         @games = Game.where(user_id: params[:user_id])
         render :index
+      elsif params[:api_id]
+        @games = Game.where(api_id: params[:api_id], sold: false)
+        render :index
       else
         @games = Game.where(sold: false).where.not(user_id: current_user.id)
         render :index
@@ -15,8 +18,10 @@ module Api
     end
     
     def show
-      @game = Game.find(params[:id])
-      render :show
+      puts params[:id]
+      @games = Game.where(api_id: params[:id])
+      puts @games
+      render :index
     end
     
     def destroy
@@ -47,7 +52,7 @@ module Api
     private
     
     def game_params
-      params.require(:game).permit(:title, :console, :comments, :price, :condition, :sold)
+      params.require(:game).permit(:title, :console, :comments, :price, :condition, :sold, :api_id)
     end
   
   end

@@ -1,1 +1,8 @@
-<a href='#/games/<%= result.id %>'><img src='<%= result.get('image').thumb_url %>' class='search-img' alt='<%= result.get('title') %>'></a>
+<div>
+  <a href='#/games/<%= result.id %>' class='sell-img' 
+    data-name='<%= result.get('name') %>'
+    data-api='<%= result.get('id') %>'
+    >
+    <img src='<%= result.get('image').thumb_url %>' class='search-img' alt='<%= result.get('title') %>'>
+  </a>
+</div>

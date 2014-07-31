@@ -3,21 +3,37 @@
 </div>
 
 <div class='row'>
-  <div class='col-xs-6 col-xs-offset-3'>
+  
+  <div class='col-xs-8 col-xs-offset-2'>
+    <h4 class='list-search'>Select Your Game Here</h4s>
+      <form class='sell-search' role='form'>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Enter title" name='query'>
+          <span class="input-group-btn">
+            <button class="btn btn-default" type='submit'>Search</button>
+          </span>
+        </div>
+      </form>
+      <div class='search-results'>
+      </div>
+  </div>
+  
+  
+  <!-- <div class='col-xs-6 col-xs-offset-1'>
 
     <form role="form" class='listing-form'>
-
+      <input type='hidden' name='game[api_id]' class='sell-api-id'>
       <div class='form-group'>
         <div class='row'>
           <div class="form-group col-xs-7">
             <label for="game_title">Title</label>
-            <input type="text" class="form-control" placeholder="Enter title" name='game[title]'>
-          </div> 
-          
+              <input type="text" class="form-control form-title" placeholder="Enter title" name='game[title]'>
+          </div>
+
           <div class=col-xs-5>
             <label for='game-console'>What console is it for?</label>
             <br>
-            <select class='form-control' name='game[console]'>
+            <select class='form-control console-option' name='game[console]'>
               <option> </option>
               <option value='PS4'>PS4</option>
               <option value='PS3'>PS3</option>
@@ -29,14 +45,15 @@
               <option value='Vita'>Vita</option>
               <option value='DS'>DS</option>
               <option value='3DS'>3DS</option>
+              <option valu='Other'>Other</option>
             </select>
           </div>
-        </div> 
+        </div>
       </div>
-   
+
       <div class='form-group'>
         <div class='row'>
-          
+
           <div class='col-xs-6 form-group'>
             <label for="condition">Condition</label>
             <br>
@@ -49,24 +66,114 @@
               <option value='Acceptable'>Acceptable</option>
             </select>
           </div>
-          
+
           <div class='col-xs-6'>
             <label for='price'>Selling Price</label>
               <input type="number" class='form-control' name='game[price]' min='1'>
           </div>
         </div>
       </div>
-      
+
       <div class='form-group'>
         <label for='comments'>Comments</label>
         <textarea class='form-control' name='game[comments]' placeholder='Enter a description or comment abour your game'></textarea>
       </div>
-      
+
       <hr>
-        
+
       <button type="submit" class="btn btn-primary form-control">List Game for Sale</button>
-      
+
     </form>
-    
-  </div>
+
+  </div> -->
+  
+  
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade create-listing-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Create Listing</h4>
+      </div>
+      <div class="modal-body">
+        
+        
+        <form role="form" class='listing-form'>
+          <input type='hidden' name='game[api_id]' class='sell-api-id'>
+          <div class='form-group'>
+            <div class='row'>
+              <div class="form-group col-xs-7">
+                <label for="game_title">Title</label>
+                  <input type="text" class="form-control form-title" placeholder="Enter title" name='game[title]'> 
+              </div> 
+          
+              <div class=col-xs-5>
+                <label for='game-console'>What console is it for?</label>
+                <br>
+                <select class='form-control console-option' name='game[console]'>
+                  <option> </option>
+                  <option value='PS4'>PS4</option>
+                  <option value='PS3'>PS3</option>
+                  <option value='360'>360</option>
+                  <option value='XBOne'>XBOne</option>
+                  <option value='Wii'>Wii</option>
+                  <option value='Wii U'>Wii U</option>
+                  <option value='PSP'>PSP</option>
+                  <option value='Vita'>Vita</option>
+                  <option value='DS'>DS</option>
+                  <option value='3DS'>3DS</option>
+                  <option valu='Other'>Other</option>
+                </select>
+              </div>
+            </div> 
+          </div>
+   
+          <div class='form-group'>
+            <div class='row'>
+          
+              <div class='col-xs-6 form-group'>
+                <label for="condition">Condition</label>
+                <br>
+                <select class='form-control' name='game[condition]'>
+                  <option> </option>
+                  <option value='Brand New'>Brand New</option>
+                  <option value='Like New'>Like New</option>
+                  <option value='Very Good'>Very Good</option>
+                  <option value='Good'>Good</option>
+                  <option value='Acceptable'>Acceptable</option>
+                </select>
+              </div>
+          
+              <div class='col-xs-6'>
+                <label for='price'>Selling Price</label>
+                  <input type="number" class='form-control' name='game[price]' min='1'>
+              </div>
+            </div>
+          </div>
+      
+          <div class='form-group'>
+            <label for='comments'>Comments</label>
+            <textarea class='form-control' name='game[comments]' placeholder='Enter a description or comment abour your game'></textarea>
+          </div>
+      
+          <hr>
+            <button type="submit" class="btn btn-primary form-control list-modal-btn">List Game for Sale</button>
+      
+        </form>  
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
 </div>

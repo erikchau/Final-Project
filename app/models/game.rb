@@ -19,7 +19,7 @@ class Game < ActiveRecord::Base
   
   default_scope {order('id ASC')}
 
-  CONSOLES = ['PS4', 'PS3', '360', 'XBOne', 'Wii', 'Wii U', 'PSP', 'Vita', 'DS', '3DS']
+  CONSOLES = ['PS4', 'PS3', '360', 'XBOne', 'Wii', 'Wii U', 'PSP', 'Vita', 'DS', '3DS', 'Other']
   CONDITIONS = ['Brand New', 'Like New', 'Very Good', 'Good', 'Acceptable']
 
   belongs_to :user
@@ -30,7 +30,7 @@ class Game < ActiveRecord::Base
   through: :sale,
   source: :buyer
 
-  validates :user_id, :title, :console, :price, :condition, presence: true
+  validates :user_id, :title, :console, :price, :condition, :api_id, presence: true
   validates :console, inclusion: CONSOLES
   validates :condition, inclusion: CONDITIONS
   validates :price, numericality: true

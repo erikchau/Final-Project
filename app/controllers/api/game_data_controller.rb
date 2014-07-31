@@ -33,7 +33,7 @@ module Api
         format: 'json',
         query: params[:query],
         resources: 'game',
-        field_list: 'name,description,id,image,platforms'
+        field_list: 'name,description,id,image,platforms,deck'
       }).to_s
       
       data = RestClient.get(url)

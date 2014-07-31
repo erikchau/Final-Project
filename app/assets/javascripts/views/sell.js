@@ -48,6 +48,7 @@ FinalProject.Views.Sell = Backbone.CompositeView.extend({
       success: function(game){
         Backbone.history.navigate('#/games/' + newListing.get('api_id') , {trigger: true});
         $('div.modal-backdrop').remove();
+        $('body').removeClass('modal-open')
       }
     });
   }

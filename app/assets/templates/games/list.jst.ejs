@@ -3,9 +3,9 @@
 <div class='row'>
   
   <div class='col-xs-4' >
-    Game Title:
-    <a data-id='<%= game.id %>' href='#/games/<%= game.get('api_id') %>' class='game-link'><%= game.get('title') %></a>
-    <br>
+   Price:
+   <%= game.get('price') %>
+   <br>
     Seller:
     <a href='#/user/<%= game.attributes.user.id %>'><%= game.attributes.user.username %></span></a>
   </div>
@@ -21,8 +21,11 @@
   </div>
 
   <div class='col-xs-2 list-div' >
-   Price:
-   <%= game.get('price') %>
+   <p class='cannot-buy-error'>You Don't Have Enough Coins! Buy More!</p>
+   <form class='buy-form'>
+     <input type='hidden' name='sale[game_id]' value='<%= game.id %>'>
+     <button class='btn btn-primary buy-btn'>Buy Game Now</button>
+   </form>
   </div>
   
 </div>

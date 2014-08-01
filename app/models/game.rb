@@ -13,6 +13,7 @@
 #  created_at :datetime
 #  updated_at :datetime
 #  api_id     :text
+#  thumb_url  :text             default("http://webmaster.ypsa.org/wp-content/uploads/2012/08/no_thumb.jpg")
 #
 
 class Game < ActiveRecord::Base

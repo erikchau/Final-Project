@@ -5,7 +5,7 @@
   
   <div class='col-xs-2' >
    Price:
-   <%= game.get('price') %>
+   <%= game.escape('price') %>
    <br>
     Seller:
     <a href='#/user/<%= game.attributes.user.id %>'><%= game.attributes.user.username %></span></a>
@@ -13,21 +13,21 @@
   
   <div class='col-xs-2' >
     Console:
-    <%= game.get('console') %>
+    <%= game.escape('console') %>
   </div>
 
   <div class='col-xs-4 list-div' >
     Comments: 
-    <%= game.get('comments') %>
+    <%= game.escape('comments') %>
   </div>
   
   <div class='col-xs-2 list-div' >
     Condition:
-    <%= game.get('condition') %>
+    <%= game.escape('condition') %>
     
   </div>
 
-  <% if (game.get('user_id') !== parseInt(userID)) { %>
+  <% if (game.escape('user_id') !== parseInt(userID)) { %>
   <div class='col-xs-2 list-div' >
    <form class='buy-form'>
      <input type='hidden' name='sale[game_id]' value='<%= game.id %>'>
@@ -46,7 +46,7 @@
   <div class='col-xs-4 list-div' >
     Game Title:
     <br>
-    <a data-id='<%= game.id %>' href='#/games/<%= game.get('api_id') %>' class='game-link'><%= game.get('title') %></a>
+    <a data-id='<%= game.id %>' href='#/games/<%= game.escape('api_id') %>' class='game-link'><%= game.escape('title') %></a>
     <br>
     
     <% if (game.attributes.buyer){ %>
@@ -66,12 +66,12 @@
   
   <div class='col-xs-4 list-div' >
     Condition:<br>
-    <%= game.get('condition') %>
+    <%= game.escape('condition') %>
   </div>
 
   <div class='col-xs-4 list-div' >
    Price:
-   <%= game.get('price') %>
+   <%= game.escape('price') %>
    
    
    <% if (game.attributes.buyer){ %>

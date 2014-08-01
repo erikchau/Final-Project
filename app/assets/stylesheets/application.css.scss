@@ -24,6 +24,9 @@ body {
   padding: 50px 0px 0px 0px;
   height: 100%;
   width: 100%;
+  background: url(http://images4.alphacoders.com/624/62426.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 h1{
@@ -76,6 +79,7 @@ h2.dashboard-well {
 div.dashboard-well {
   width: 49%;
   text-align: center;
+  background-color: rgba(255,255,255,.5)
 }
 
 .list-div {
@@ -165,7 +169,8 @@ span.link-kill a {
 .guest-button{
   display: inline-block;
   float: right;
-  background-color: lightgreen;
+  background-color: #33CC33;
+  color: white;
 }
 
 .front-left {
@@ -191,12 +196,26 @@ span.link-kill a {
 }
 
 .sign-up-div {
-  background: url(http://images4.alphacoders.com/624/62426.jpg);
-  background-size: cover;
   width: 100%;
   height: 100%;
 }
 
 .sign-up-well {
   background-color: rgba(255,255,255,.5)
+}
+
+.sell-well {
+  background-color: rgba(255,255,255,.5)
+}
+
+.index-well {
+  background-color: rgba(255,255,255,.5)
+}
+
+.navbar {
+ background-color: rgba(255,255,255,0.75);
+}
+
+.coin-btn-nav {
+  background-color: #FFFF99;
 }

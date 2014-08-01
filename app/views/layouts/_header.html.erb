@@ -32,7 +32,7 @@
         <% end %>
 
         <% if signed_in? %>
-          <li> &nbsp &nbsp<button data-toggle="modal" data-target=".bs-example-modal-sm" class='navbar-btn btn btn-default'>Coins: <span class='coin_amt'><%= current_user.coins %></span></button></li>
+          <li> &nbsp &nbsp<button data-toggle="modal" data-target=".bs-example-modal-sm" class='navbar-btn btn btn-default coin-btn-nav'>Coins: <span class='coin_amt'><%= current_user.coins %></span></button></li>
           <li><p class="navbar-text navbar-right"><%= current_user.username %> &nbsp &nbsp</li>
         <% end %>
 

@@ -105,6 +105,7 @@ div.dashboard-well {
 
 .search-results {
   position: relative;
+  background-color: rgba(255,255,255,.5);
 }
 
 .search-div {
@@ -114,6 +115,7 @@ div.dashboard-well {
 .search-result-item {
   display: inline-block;
   margin: 10px ;
+  box-shadow: 5px 5px 5px #888888;
 }
 
 .browse-item {
@@ -230,4 +232,8 @@ span.link-kill a {
 
 .buy-btn{
   margin-left: -20px;
+}
+
+.thanks-div {
+  background-color: rgba(255,255,255,0.5);
 }

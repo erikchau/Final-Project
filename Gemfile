@@ -21,7 +21,6 @@ gem 'bcrypt'
 gem 'addressable'
 
 gem 'rest-client'
-
 gem 'ejs'
 gem 'rails_12factor', group: :production
 

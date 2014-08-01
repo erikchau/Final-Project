@@ -62,7 +62,9 @@ FinalProject.Routers.AppRouter = Backbone.Router.extend({
       this.currentView.remove()
     }
     
-    $('.content').html(view.render().$el)
+    $('.content').html(view.render().$el.fadeIn(500, function(){
+      view.onRender();
+    }))
     this.currentView = view
   }
   

@@ -1,4 +1,69 @@
-<br>
+
+<div class='sign-in-div'> 
+<br><br>
+
+
+    
+  <div class='front-left well'>
+      <h1>Trade your video games, free</h1>
+      <p>99Gamers is a community filled with awesome people who trade their video games with one another. It's game changing. We provide a simple way for you to get the most value out of your video games. All 100% free - no fees or hidden costs, just savings.</p>
+      <h2>How it works</h2>
+      <p><strong>1)</strong> Add the video games you no longer play. Adding a game is super easy. Simply select your video games condition and price to sell. When your video game finds a buyer, you'll be notified by email.
+      <p><strong>2)</strong> Another member will come along and buy it. You'll ship them the video game (we'll help you through the complete process!) for a virtual currency called 'coins'. </p>
+      <p><strong>3)</strong>) Spend earned coins on video games you've longed for!</p>
+      <p>With over 30,600 video games on 39 platforms, you'll always have something great to play. And best of all, when you're finished, just trade it for another!</p>
+  </div>
+  
+  <div class='well front-right'>
+    <img src='https://99gamers.com/images/99_logo.png' class='logo'>
+    <h1>Sign in to Ninety9Gamers</h1>
+
+    <form role="form" action='<%= sessions_url %>' method='POST'>
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Username</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter username" name='user[username]'>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name='user[password]'>
+      </div>
+
+      <div>
+      <button type="submit" class="btn btn-primary auth-button">Submit</button>
+      </div>
+    </form>
+    
+    <div>
+      <form role="form" action='<%= sessions_url %>' method='POST'>
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="hidden" name='user[username]' value='guest'>
+        <input type="hidden" name='user[password]' value='password'>
+        <button type="submit" class="btn btn-default guest-button">Guest Login</button>
+      </form>
+    </div>
+  </div>
+      
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <br>
 <br>
 <div class='sign-in-div'>
   <div class='row'>
@@ -26,7 +91,7 @@
         <button type="submit" class="btn btn-primary auth-button">Submit</button>
         </div>
       </form>
-      
+
       <div>
         <form role="form" action='<%= sessions_url %>' method='POST'>
           <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -41,3 +106,4 @@
 
 
 
+ -->

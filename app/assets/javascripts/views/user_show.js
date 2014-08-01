@@ -10,7 +10,7 @@ FinalProject.Views.UserShow = Backbone.CompositeView.extend({
   
   addGame: function(game){
     if(game.get('sold') === false){
-      var gameShow = new FinalProject.Views.GameList({model: game});
+      var gameShow = new FinalProject.Views.BrowseItem({model: game});
       this.addSubview('.selling', gameShow);
     }
   },

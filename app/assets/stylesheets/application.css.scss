@@ -43,6 +43,11 @@ h1{
   display:none;
 }
 
+.cannot-buy-error-show{
+  color: red;
+  text-align: right;
+}
+
 .get-started{
   display: block;
   text-align: center;
@@ -94,6 +99,11 @@ div.dashboard-well {
 }
 
 .search-result-item {
+  display: inline-block;
+  margin: 10px ;
+}
+
+.browse-item {
   display: inline-block;
   margin: 10px ;
 }

@@ -8,7 +8,8 @@ json.(game, :id,
             :api_id,
             :sold,
             :created_at, 
-            :updated_at
+            :updated_at,
+            :thumb_url
 )
 
 json.user do

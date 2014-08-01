@@ -20,15 +20,16 @@
     <%= game.get('condition') %>
   </div>
 
+  <% if (game.get('user_id') !== parseInt(userID)) { %>
   <div class='col-xs-2 list-div' >
-   <p class='cannot-buy-error'>You Don't Have Enough Coins! Buy More!</p>
    <form class='buy-form'>
      <input type='hidden' name='sale[game_id]' value='<%= game.id %>'>
      <button class='btn btn-primary buy-btn'>Buy Game Now</button>
    </form>
   </div>
-  
+  <% } %>
 </div>
+<p class='cannot-buy-error <%= game.id %>'>You Don't Have Enough Coins! Buy More!</p>
 <% } %>
 
 

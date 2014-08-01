@@ -38,6 +38,7 @@ FinalProject.Views.Sell = Backbone.CompositeView.extend({
     $('.create-listing-modal').modal('show');
     $('input.form-title').val($(event.currentTarget).data('name'));
     $('input.sell-api-id').val($(event.currentTarget).data('api'));
+    $('input.sell-thumb').val($(event.currentTarget).data('thumb'));
   },
   
   createListing: function(event){

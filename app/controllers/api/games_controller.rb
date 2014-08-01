@@ -12,7 +12,7 @@ module Api
         @games = Game.where(api_id: params[:api_id], sold: false)
         render :index
       else
-        @games = Game.where(sold: false).where.not(user_id: current_user.id)
+        @games = Game.where(sold: false)
         render :index
       end
     end
@@ -52,7 +52,7 @@ module Api
     private
     
     def game_params
-      params.require(:game).permit(:title, :console, :comments, :price, :condition, :sold, :api_id)
+      params.require(:game).permit(:title, :console, :comments, :price, :condition, :sold, :api_id, :thumb_url)
     end
   
   end

@@ -36,7 +36,8 @@ FinalProject.Views.GameList = Backbone.View.extend({
       },
       error: function(error, response){
         var errorMessage = '<p>' + response.responseText + '</p>';
-        $('.cannot-buy-error').removeClass('cannot-buy-error');
+        $('.cannot-buy-error').addClass('cannot-buy-error-show');
+        $('.cannot-buy-error' + '.' + that.model.id).removeClass('cannot-buy-error');
       }
     });
   },

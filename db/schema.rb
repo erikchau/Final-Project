@@ -11,22 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140728182644) do
+ActiveRecord::Schema.define(version: 20140801095444) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "games", force: true do |t|
-    t.integer  "user_id",                    null: false
-    t.string   "title",                      null: false
-    t.string   "console",                    null: false
+    t.integer  "user_id",                                                                                  null: false
+    t.string   "title",                                                                                    null: false
+    t.string   "console",                                                                                  null: false
     t.text     "comments"
-    t.integer  "price",                      null: false
-    t.string   "condition",                  null: false
+    t.integer  "price",                                                                                    null: false
+    t.string   "condition",                                                                                null: false
     t.boolean  "sold",       default: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "api_id"
+    t.text     "thumb_url",  default: "http://webmaster.ypsa.org/wp-content/uploads/2012/08/no_thumb.jpg"
   end
 
   add_index "games", ["api_id"], name: "index_games_on_api_id", using: :btree

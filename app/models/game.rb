@@ -30,7 +30,7 @@ class Game < ActiveRecord::Base
   through: :sale,
   source: :buyer
 
-  validates :user_id, :title, :console, :price, :condition, :api_id, presence: true
+  validates :user_id, :title, :console, :price, :condition, :api_id, :thumb_url, presence: true
   validates :console, inclusion: CONSOLES
   validates :condition, inclusion: CONDITIONS
   validates :price, numericality: true

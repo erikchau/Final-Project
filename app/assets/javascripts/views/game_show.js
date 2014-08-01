@@ -11,7 +11,8 @@ FinalProject.Views.GameShow = Backbone.CompositeView.extend({
   },
   
   addListing: function(listing){
-    var listingShow = new FinalProject.Views.GameList({model: listing});
+    var userID = $('#bootstrapped-user-id').text();
+    var listingShow = new FinalProject.Views.GameList({model: listing, userID: userID});
     this.addSubview('.listings', listingShow);
   },
   

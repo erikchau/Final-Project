@@ -24,7 +24,7 @@ FinalProject.Views.GameShow = Backbone.CompositeView.extend({
   },
   
   addImage: function(){
-    var img = '<img src=\'' + this.model.get('image').small_url + '\' class="game-img">'
+    var img = '<img src=\'' + this.model.get('image').small_url + '\' class="game-img well">'
     this.$el.find($('.show-img')).html(img)
   }
  

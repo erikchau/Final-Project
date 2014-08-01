@@ -139,3 +139,23 @@ span.link-kill a {
 .listings-header {
   text-align: center;
 }
+
+.browse-instructions {
+  text-align: center;
+}
+
+.listing-row {
+  font-size: 12px;
+}
+
+
+.auth-button {
+  display: inline-block;
+  float: left;
+}
+
+.guest-button{
+  display: inline-block;
+  float: right;
+  background-color: lightgreen;
+}

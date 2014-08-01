@@ -6,6 +6,7 @@ FinalProject.Views.Sell = Backbone.CompositeView.extend({
   initialize: function(){
     this.search = new FinalProject.Collections.GameDatas
     this.listenTo(this.search, 'add', this.addResult)
+    this.listenTo(this.search, 'sync', this.fixLoaders)
   },
   
   render: function(){
@@ -13,6 +14,13 @@ FinalProject.Views.Sell = Backbone.CompositeView.extend({
     this.$el.html(renderedContent);
     this.attachSubviews();
     return this
+  },
+  
+  fixLoaders: function(){
+    $('.loading-results').addClass('hidden')
+    if (this.search.length === 0){
+      $('.no-results').removeClass('hidden')
+    }
   },
   
   events: {
@@ -24,6 +32,8 @@ FinalProject.Views.Sell = Backbone.CompositeView.extend({
   findGames: function(event){
     event.preventDefault();
     $('.search-results').empty();
+    $('.loading-results').removeClass('hidden')
+    $('.no-results').addClass('hidden')
     var query = $(event.currentTarget).serializeJSON();
     this.search.fetch({data: {query: query.query}});
   },
@@ -35,6 +45,7 @@ FinalProject.Views.Sell = Backbone.CompositeView.extend({
   
   fillForm: function(event){
     event.preventDefault();
+    $('.errors').empty();
     $('.create-listing-modal').modal('show');
     $('input.form-title').val($(event.currentTarget).data('name'));
     $('input.sell-api-id').val($(event.currentTarget).data('api'));
@@ -50,6 +61,12 @@ FinalProject.Views.Sell = Backbone.CompositeView.extend({
         Backbone.history.navigate('#/games/' + newListing.get('api_id') , {trigger: true});
         $('div.modal-backdrop').remove();
         $('body').removeClass('modal-open')
+      },
+      error: function(obj, errors){
+        var messages = JSON.parse(errors.responseText);
+        _(messages).each(function(error){
+          $('.errors').append('<li>' + error + '</li>')
+        })
       }
     });
   }

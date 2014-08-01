@@ -1,11 +1,13 @@
-<div class='page-header'>
-  <h1 class='header'>List Your Game Here!</h1>
-</div>
-
 <div class='row'>
+
+  <div class='page-header col-xs-8 col-xs-offset-2'>
+    <h1 class='header'>List Your Game Here!</h1>
+    <br>
+    <p>This is where you can put games up for other users to buy. First search for the game you are selling in the search bar and find your game. Then fill out the required data and submit!</p>
+  </div>
   
   <div class='col-xs-8 col-xs-offset-2'>
-    <h4 class='list-search'>Select Your Game Here</h4s>
+    <h4 class='list-search'>What game are you selling?</h4>
       <form class='sell-search' role='form'>
         <div class="input-group">
           <input type="text" class="form-control" placeholder="Enter title" name='query'>
@@ -16,6 +18,8 @@
       </form>
       <div class='search-results'>
       </div>
+      <img class='loading-results hidden' src='http://fluffynukeit.com/wp-content/uploads/2011/06/mario_running.gif'></img>
+      <h1 class='no-results hidden'>No Results Found</h1>
   </div>
   
 </div>
@@ -30,8 +34,9 @@
         <h4 class="modal-title">Create Listing</h4>
       </div>
       <div class="modal-body">
-        
-        
+        <ul class='errors'>
+        </ul>
+
         <form role="form" class='listing-form'>
           <input type='hidden' name='game[api_id]' class='sell-api-id'>
           <input type='hidden' name='game[thumb_url]' class='sell-thumb'>

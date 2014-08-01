@@ -26,13 +26,13 @@
               <div class="form-group">
                 <input type="text" class="form-control nav-search-input" placeholder="Search for Games" name='query'>
               </div>
-              <button type="submit" class="btn btn-default nav-search-submit">Search</button>
+              <button type="submit" class="btn btn-primary nav-search-submit">Search</button>
             </form>
         </li>
         <% end %>
 
         <% if signed_in? %>
-          <li><button data-toggle="modal" data-target=".bs-example-modal-sm" class='navbar-btn btn btn-default'>Coins: <span class='coin_amt'><%= current_user.coins %></span></button></li>
+          <li> &nbsp &nbsp<button data-toggle="modal" data-target=".bs-example-modal-sm" class='navbar-btn btn btn-default'>Coins: <span class='coin_amt'><%= current_user.coins %></span></button></li>
           <li><p class="navbar-text navbar-right"><%= current_user.username %> &nbsp &nbsp</li>
         <% end %>
 

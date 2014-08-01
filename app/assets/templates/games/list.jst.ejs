@@ -1,13 +1,19 @@
 <% if (dashboard === false) { %>
 <hr>
-<div class='row'>
+<p class='cannot-buy-error <%= game.id %>'>You Don't Have Enough Coins! Buy More!</p>
+<div class='row listing-row'>
   
-  <div class='col-xs-4' >
+  <div class='col-xs-2' >
    Price:
    <%= game.get('price') %>
    <br>
     Seller:
     <a href='#/user/<%= game.attributes.user.id %>'><%= game.attributes.user.username %></span></a>
+  </div>
+  
+  <div class='col-xs-2' >
+    Console:
+    <%= game.get('console') %>
   </div>
 
   <div class='col-xs-4 list-div' >
@@ -18,18 +24,18 @@
   <div class='col-xs-2 list-div' >
     Condition:
     <%= game.get('condition') %>
+    
   </div>
 
   <% if (game.get('user_id') !== parseInt(userID)) { %>
   <div class='col-xs-2 list-div' >
    <form class='buy-form'>
      <input type='hidden' name='sale[game_id]' value='<%= game.id %>'>
-     <button class='btn btn-primary buy-btn'>Buy Game Now</button>
+     <button class='btn btn-xs btn-primary buy-btn'>Buy Game Now</button>
    </form>
   </div>
   <% } %>
 </div>
-<p class='cannot-buy-error <%= game.id %>'>You Don't Have Enough Coins! Buy More!</p>
 <% } %>
 
 

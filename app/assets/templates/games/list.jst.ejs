@@ -27,7 +27,7 @@
     
   </div>
 
-  <% if (game.escape('user_id') !== parseInt(userID)) { %>
+  <% if (game.get('user_id') !== parseInt(userID)) { %>
   <div class='col-xs-2 list-div' >
    <form class='buy-form'>
      <input type='hidden' name='sale[game_id]' value='<%= game.id %>'>
